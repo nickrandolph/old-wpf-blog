@@ -30,14 +30,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)Assets\LockScreenLogo.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\SplashScreen.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Square150x150Logo.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Square44x44Logo.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\StoreLogo.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Wide310x150Logo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en\Resources.resw" />
   </ItemGroup>
 </Project>

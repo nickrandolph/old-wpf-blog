@@ -5,29 +5,41 @@
     xmlns:local="using:EmptyBinding"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:system="using:System"
-    mc:Ignorable="d">
+      mc:Ignorable="d">
 
-  <Page.Resources>
-    <system:String x:Key="helloString">Hello</system:String>
-    <!--<local:GreekGod Name="Zeus" Description="Supreme God of the Olympians" RomanName="Jupiter" x:Key="zeus" />-->
+    <Page.Resources>
+        <x:String x:Key="helloString">Hello</x:String>
+        <!-- POC entities don't work with Uno at the moment - see code behind in App.xaml.cs -->
+        <!--<local:GreekGod Name="Zeus" Description="Supreme God of the Olympians" RomanName="Jupiter" x:Key="zeus" />-->
 
-    <DataTemplate x:Key="contentTemplate">
-      <StackPanel Orientation="Horizontal">
-        <TextBlock Foreground="RoyalBlue" Text="{Binding Path=Name}" />
-        <TextBlock Text=":" Margin="0,0,5,0" />
-        <TextBlock Foreground="Silver" Text="{Binding Path=Description}" />
-      </StackPanel>
-    </DataTemplate>
-  </Page.Resources>
+        <DataTemplate x:Key="contentTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Foreground="RoyalBlue"
+                           Text="{Binding Path=Name}" />
+                <TextBlock Text=":"
+                           Margin="0,0,5,0" />
+                <TextBlock Foreground="Silver"
+                           Text="{Binding Path=Description}" />
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
 
-  <StackPanel>
-    <Border BorderBrush="RoyalBlue" BorderThickness="2" Margin="25,25,25,0" Padding="5" DataContext="{StaticResource helloString}">
-      <TextBlock Text="{Binding}" />
-    </Border>
+    <StackPanel>
+        <Border BorderBrush="RoyalBlue"
+                BorderThickness="2"
+                Margin="25,25,25,0"
+                Padding="5"
+                DataContext="{StaticResource helloString}">
+            <TextBlock Text="{Binding}" />
+        </Border>
 
-    <Border BorderBrush="RoyalBlue" BorderThickness="2" Margin="25" Padding="5" DataContext="{StaticResource zeus}">
-      <ContentControl Content="{Binding}" ContentTemplate="{StaticResource contentTemplate}" />
-    </Border>
-  </StackPanel>
+        <Border BorderBrush="RoyalBlue"
+                BorderThickness="2"
+                Margin="25"
+                Padding="5"
+                DataContext="{StaticResource zeus}">
+            <ContentControl Content="{Binding}"
+                            ContentTemplate="{StaticResource contentTemplate}" />
+        </Border>
+    </StackPanel>
 </Page>

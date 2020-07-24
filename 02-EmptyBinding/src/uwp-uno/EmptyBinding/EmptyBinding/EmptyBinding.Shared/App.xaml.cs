@@ -1,9 +1,19 @@
 ﻿using Microsoft.Extensions.Logging;
 using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 namespace EmptyBinding
@@ -19,7 +29,7 @@ namespace EmptyBinding
         /// </summary>
         public App()
         {
-            ConfigureFilters(Uno.Extensions.LogExtensionPoint.AmbientLoggerFactory);
+            ConfigureFilters(global::Uno.Extensions.LogExtensionPoint.AmbientLoggerFactory);
 
             this.InitializeComponent();
             this.Suspending += OnSuspending;
@@ -41,9 +51,9 @@ namespace EmptyBinding
 
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
-            {
-                // this.DebugSettings.EnableFrameRateCounter = true;
-            }
+			{
+				// this.DebugSettings.EnableFrameRateCounter = true;
+			}
 #endif
             Frame rootFrame = Windows.UI.Xaml.Window.Current.Content as Frame;
 
@@ -74,7 +84,6 @@ namespace EmptyBinding
                     // parameter
                     rootFrame.Navigate(typeof(MainPage), e.Arguments);
                 }
-
                 // Ensure the current window is active
                 Windows.UI.Xaml.Window.Current.Activate();
             }
@@ -87,7 +96,7 @@ namespace EmptyBinding
         /// <param name="e">Details about the navigation failure</param>
         void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
         {
-            throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
+            throw new Exception($"Failed to load {e.SourcePageType.FullName}: {e.Exception}");
         }
 
         /// <summary>
@@ -100,10 +109,10 @@ namespace EmptyBinding
         private void OnSuspending(object sender, SuspendingEventArgs e)
         {
             var deferral = e.SuspendingOperation.GetDeferral();
-
             //TODO: Save application state and stop any background activity
             deferral.Complete();
         }
+
 
         /// <summary>
         /// Configures global logging
@@ -137,10 +146,22 @@ namespace EmptyBinding
 
 						// DependencyObject memory references tracking
 						// { "ReferenceHolder", LogLevel.Debug },
+
+						// ListView-related messages
+						// { "Windows.UI.Xaml.Controls.ListViewBase", LogLevel.Debug },
+						// { "Windows.UI.Xaml.Controls.ListView", LogLevel.Debug },
+						// { "Windows.UI.Xaml.Controls.GridView", LogLevel.Debug },
+						// { "Windows.UI.Xaml.Controls.VirtualizingPanelLayout", LogLevel.Debug },
+						// { "Windows.UI.Xaml.Controls.NativeListViewBase", LogLevel.Debug },
+						// { "Windows.UI.Xaml.Controls.ListViewBaseSource", LogLevel.Debug }, //iOS
+						// { "Windows.UI.Xaml.Controls.ListViewBaseInternalContainer", LogLevel.Debug }, //iOS
+						// { "Windows.UI.Xaml.Controls.NativeListViewBaseAdapter", LogLevel.Debug }, //Android
+						// { "Windows.UI.Xaml.Controls.BufferViewCache", LogLevel.Debug }, //Android
+						// { "Windows.UI.Xaml.Controls.VirtualizingPanelGenerator", LogLevel.Debug }, //WASM
 					}
                 )
 #if DEBUG
-                .AddConsole(LogLevel.Debug);
+				.AddConsole(LogLevel.Debug);
 #else
                 .AddConsole(LogLevel.Information);
 #endif

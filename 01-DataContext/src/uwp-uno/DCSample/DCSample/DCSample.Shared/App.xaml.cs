@@ -55,7 +55,7 @@ namespace DCSample
                 RomanName = "Neptune"
             };
 #if DEBUG
-			if (System.Diagnostics.Debugger.IsAttached)
+            if (System.Diagnostics.Debugger.IsAttached)
 			{
 				// this.DebugSettings.EnableFrameRateCounter = true;
 			}
