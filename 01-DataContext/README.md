@@ -25,6 +25,7 @@ The third TextBlock should be straightforward - it displays "Neptune".
 
 Most data bound applications I see from users tend to use DataContext much more heavily than Source. My recommendation is to use DataContext only when you need to bind more than one property to a particular source. When binding only one property to a source, I always use Source. The reason for this is ease of debugging - I would rather see all the information about the Binding in one place than search for the nearest DataContext to understand what is going on. In a small sample like the one above there is no big advantage, but in complex applications this could save you some time.
 
+**WPF**
 ![](Images/DataContext.PNG)
 
 
@@ -36,3 +37,6 @@ In UWP it's not very common to reference the Windows of the application directly
         <local:GreekGod Name="Zeus" Description="Supreme God of the Olympians" RomanName="Jupiter" x:Key="zeus"/>
         <local:GreekGod Name="Poseidon" Description="God of the sea, earthquakes and horses" RomanName="Neptune" x:Key="poseidon"/>
     </Page.Resources>
+
+**UWP**
+![](Images/DataContext-uno.PNG)

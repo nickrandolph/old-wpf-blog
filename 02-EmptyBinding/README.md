@@ -39,4 +39,11 @@ In this case, ContentControl does not know how to display the GreekGod data. The
 
 Notice that none of the Binding statements inside the DataTemplate has a Source. That is because a DataContext is automatically set to the data object being templated.
 
+**WPF**
 ![](Images/EmptyBinding.png)
+
+**UWP**
+![](Images/EmptyBinding-uno.png)
+
+**WASM**
+![](Images/EmptyBinding-wasm.png)
