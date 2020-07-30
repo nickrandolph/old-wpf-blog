@@ -28,3 +28,18 @@ There is also a listBox.ItemContainerGenerator.ContainerFromItem(object item) th
 I will talk about selection and current item in detail in some other post, but for this sample it is sufficient to know that to keep the selection and current item in sync, I set IsSynchronizedWithCurrentItem="true" in the ListBox.
 
 ![](Images/GetListBoxItem.png)
+
+
+**UWP/Uno Notes**
+
+There are a couple of changes to the code for UWP/Uno:
+
+- Whilst the ListBox control still exists, it's more common to use the ListView as it has a nice set of built in styles
+- The listBox.Items collection doesn't have a CurrentItem property. Instead we can use listBox.SelectedItem
+- Attempting to set the IsSynchronizedWithCurrentItem property on the ListView (or even ListBox) throws an exception and is generally not required since the SelectedItem property is in sync with what is selected in the ListView.
+
+![](Images/GetListBoxItem-uwp.png)
+
+
+**XAML Note**
+The structure of the XAML has been left the same from the original post. However, you should really avoid embedding a ListView or ListBox within a StackPanel. This layout will limit the ability of the view to resize without the button being pushed off screen.
