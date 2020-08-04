@@ -1,4 +1,4 @@
-# New feature in September PDC: DisplayMemberPath
+# DisplayMemberPath
 
 As I've shown in previous posts, binding an ItemsControl to an IEnumerable data source is really easy (remember that ListBox and ComboBox derive from ItemsControl). With DisplayMemberPath it's even easier for the scenario where you want to display only one property of each data item as text. Before DisplayMemberPath, this scenario required the use of a DataTemplate that would specify the property we're interested in, like in the following xaml:
 
@@ -18,4 +18,8 @@ It's that easy :)
 
 The image below shows both versions of the ItemsControl, the one on the left is using DataTemplate and the one on the right is using DisplayMemberPath.
 
+**WPF**
 ![](Images/DisplayMemberPathSample.png)
+
+**UWP**
+![](Images/DisplayMemberPathSample-uwp.png)

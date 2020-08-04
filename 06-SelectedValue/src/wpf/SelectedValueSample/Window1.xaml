@@ -1,0 +1,16 @@
+﻿<Window x:Class="SelectedValueSample.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:SelectedValueSample"
+    Title="SelectedValueSample"
+	SizeToContent="WidthAndHeight"
+    >
+	
+	<Border Margin="30" BorderBrush="Blue" BorderThickness="2" Padding="10">
+		<StackPanel Name="mainStackPanel">
+			<ListBox ItemsSource="{Binding}" DisplayMemberPath="Name" SelectedValue="Messenger of the Gods" SelectedValuePath="Description" Name="listBox1" Margin="5"/>
+			<Button Click="BtnClick" Margin="5">Inspect selection</Button>
+		</StackPanel>
+	</Border>
+
+</Window>

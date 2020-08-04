@@ -23,4 +23,11 @@ SelectedValue is particularly useful when only part of your item is stored in th
 
 If you have ideas of how to combine these two properties in one, we would love to hear it.
 
+**WPF**
+
 ![](Images/SelectedValueSample.png)
+
+
+**UWP**
+
+![](Images/SelectedValueSample-uwp.png)
