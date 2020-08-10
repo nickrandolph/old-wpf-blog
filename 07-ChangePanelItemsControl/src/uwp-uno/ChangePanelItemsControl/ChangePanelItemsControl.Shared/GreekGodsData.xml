@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GreekGods xmlns="">
+	<GreekGod>
+		<Name>Aphrodite</Name>
+		<Description>Goddess of love, beauty and fertility</Description>
+		<RomanName>Venus</RomanName>
+	</GreekGod>
+	<GreekGod>
+		<Name>Apollo</Name>
+		<Description>God of prophesy, music and healing</Description>
+		<RomanName>Apollo</RomanName>
+	</GreekGod>
+	<GreekGod Prop="Hello">
+		<Name>Ares</Name>
+		<Description>God of war</Description>
+		<RomanName>Mars</RomanName>
+	</GreekGod>
+	<GreekGod>
+		<Name>Artemis</Name>
+		<Description>Virgin goddess of the hunt</Description>
+		<RomanName>Diana</RomanName>
+	</GreekGod>
+	<GreekGod>
+		<Name>Athena</Name>
+		<Description>Goddess of crafts and the domestic arts</Description>
+		<RomanName>Athena</RomanName>
+	</GreekGod>
+	<GreekGod>
+		<Name>Demeter</Name>
+		<Description>Goddess of agriculture</Description>
+		<RomanName>Ceres</RomanName>
+	</GreekGod>
+	<GreekGod>
+		<Name>Dionysus</Name>
+		<Description>God of wine</Description>
+		<RomanName>Bacchus</RomanName>
+	</GreekGod>
+	<GreekGod>
+		<Name>Hephaestus</Name>
+		<Description>God of fire and crafts</Description>
+		<RomanName>Vulcan</RomanName>
+	</GreekGod>
+	<GreekGod>
+		<Name>Hera</Name>
+		<Description>Goddess of marriage</Description>
+		<RomanName>Juno</RomanName>
+	</GreekGod>
+	<GreekGod>
+		<Name>Hermes</Name>
+		<Description>Messenger of the Gods</Description>
+		<RomanName>Mercury</RomanName>
+	</GreekGod>
+	<GreekGod>
+		<Name>Poseidon</Name>
+		<Description>God of the sea, earthquakes and horses</Description>
+		<RomanName>Neptune</RomanName>
+	</GreekGod>
+	<GreekGod>
+		<Name>Zeus</Name>
+		<Description>Supreme God of the Olympians</Description>
+		<RomanName>Jupiter</RomanName>
+	</GreekGod>
+</GreekGods>

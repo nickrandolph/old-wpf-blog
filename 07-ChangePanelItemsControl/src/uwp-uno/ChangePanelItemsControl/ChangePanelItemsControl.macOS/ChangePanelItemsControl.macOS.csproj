@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{97514DDC-74EE-425C-89CA-E2ADEFFA8BAB}</ProjectGuid>
+    <ProjectGuid>{BCE0D31A-BBAC-4216-956B-74ADC8721178}</ProjectGuid>
     <ProjectTypeGuids>{A3F8F2AB-B479-4A4A-A458-A89E7DC349F1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SelectedValueSample.macOS</RootNamespace>
-    <AssemblyName>SelectedValueSample.macOS</AssemblyName>
+    <RootNamespace>ChangePanelItemsControl.macOS</RootNamespace>
+    <AssemblyName>ChangePanelItemsControl.macOS</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <TargetFrameworkIdentifier>Xamarin.Mac</TargetFrameworkIdentifier>
     <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
@@ -69,12 +69,12 @@
     <Reference Include="System.Memory" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Uno.UI" Version="3.0.0-dev.1367" />
-    <PackageReference Include="Uno.UI.RemoteControl" Version="3.0.0-dev.1367" Condition="'$(Configuration)'=='Debug'" />
+    <PackageReference Include="Uno.UI" Version="3.0.0-dev.1515" />
+    <PackageReference Include="Uno.UI.RemoteControl" Version="3.0.0-dev.1515" Condition="'$(Configuration)'=='Debug'" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Filter" Version="1.1.1" />
   </ItemGroup>
-  <Import Project="..\SelectedValueSample.Shared\SelectedValueSample.Shared.projitems" Label="Shared" Condition="Exists('..\SelectedValueSample.Shared\SelectedValueSample.Shared.projitems')" />
+  <Import Project="..\ChangePanelItemsControl.Shared\ChangePanelItemsControl.Shared.projitems" Label="Shared" Condition="Exists('..\ChangePanelItemsControl.Shared\ChangePanelItemsControl.Shared.projitems')" />
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-128.png" />

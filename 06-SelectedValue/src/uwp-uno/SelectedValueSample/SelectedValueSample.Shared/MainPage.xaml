@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Border Margin="30"
+    <Border Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="30"
             BorderBrush="Blue"
             BorderThickness="2"
             Padding="10">
