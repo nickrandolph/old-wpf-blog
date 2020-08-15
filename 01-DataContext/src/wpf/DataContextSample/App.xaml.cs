@@ -2,7 +2,7 @@ using System.Windows;
 
 namespace DataContextSample
 {
-    public partial class MyApp : Application
+    public partial class App : Application
     {
     }
 }
