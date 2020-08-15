@@ -1,6 +1,6 @@
-<Application x:Class="EmptyBinding.MyApp"
+<Application x:Class="EmptyBinding.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             Startup="AppStartingUp">
-  <Application.Resources />
+             StartupUri="Window1.xaml">
+    <Application.Resources />
 </Application>
