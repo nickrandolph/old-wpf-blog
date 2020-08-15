@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataContextSample.iOS", "Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataContextSample.UWP", "DataContextSample\DataContextSample.UWP\DataContextSample.UWP.csproj", "{AA2BF54F-77F6-4664-B96C-38DCFF8EBA58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataContextSample.Wasm", "DataContextSample\DataContextSample.Wasm\DataContextSample.Wasm.csproj", "{951B9921-BB01-42A5-A00E-62FCD530CEF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataContextSample.Wasm", "DataContextSample\DataContextSample.Wasm\DataContextSample.Wasm.csproj", "{951B9921-BB01-42A5-A00E-62FCD530CEF8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataContextSample.macOS", "DataContextSample\DataContextSample.macOS\DataContextSample.macOS.csproj", "{76219AB5-F4D3-4541-8F4F-2D873E7E14F4}"
 EndProject
@@ -162,6 +162,7 @@ Global
 		{86786751-FE3A-4A7E-8A43-75396F1368EB}.Debug|ARM64.ActiveCfg = Debug|iPhone
 		{86786751-FE3A-4A7E-8A43-75396F1368EB}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{86786751-FE3A-4A7E-8A43-75396F1368EB}.Debug|iPhone.Build.0 = Debug|iPhone
+		{86786751-FE3A-4A7E-8A43-75396F1368EB}.Debug|iPhone.Deploy.0 = Debug|iPhone
 		{86786751-FE3A-4A7E-8A43-75396F1368EB}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{86786751-FE3A-4A7E-8A43-75396F1368EB}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{86786751-FE3A-4A7E-8A43-75396F1368EB}.Debug|x64.ActiveCfg = Debug|iPhone

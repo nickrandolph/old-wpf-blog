@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{76219AB5-F4D3-4541-8F4F-2D873E7E14F4}</ProjectGuid>
+    <ProjectGuid>{AC825774-BC14-4981-BEE1-DB6F7510ED50}</ProjectGuid>
     <ProjectTypeGuids>{A3F8F2AB-B479-4A4A-A458-A89E7DC349F1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>DataContextSample.macOS</RootNamespace>
@@ -69,7 +69,11 @@
     <Reference Include="System.Memory" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Uno.UI.RemoteControl" Version="3.0.5" Condition="'$(Configuration)'=='Debug'" />
+    <PackageReference Include="Uno.SourceGenerationTasks">
+      <Version>3.0.0-dev.10</Version>
+    </PackageReference>
+    <PackageReference Include="Uno.WinUI" Version="3.0.5" />
+    <PackageReference Include="Uno.WinUI.RemoteControl" Version="3.0.5" Condition="'$(Configuration)'=='Debug'" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Filter" Version="1.1.1" />
   </ItemGroup>
@@ -99,7 +103,7 @@
     <Compile Include="Main.cs" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Fonts\winjs-symbols.ttf">
+    <BundleResource Include="Resources\Fonts\uno-fluentui-assets.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </BundleResource>
   </ItemGroup>
@@ -112,14 +116,12 @@
 				is properly adding the local System.Memory to the Reference item group.
 		-->
     <ItemGroup>
-      <_ReferenceToRemove Include="@(Reference)" Condition="'%(Reference.Identity)'=='System.Memory'" />
       <Reference Remove="@(_ReferenceToRemove)" />
       <Reference Include="System.Memory" />
     </ItemGroup>
   </Target>
   <Target Name="VS16_RemoveSystemMemory" BeforeTargets="FindReferenceAssembliesForReferences">
     <ItemGroup>
-      <_ReferencePathToRemove Include="@(ReferencePath)" Condition="'%(ReferencePath.NuGetPackageId)'=='System.Memory'" />
       <ReferencePath Remove="@(_ReferencePathToRemove)" />
     </ItemGroup>
   </Target>

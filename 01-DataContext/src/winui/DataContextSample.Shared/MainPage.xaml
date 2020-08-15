@@ -15,7 +15,6 @@
                         Description="God of the sea, earthquakes and horses"
                         RomanName="Neptune" />
     </Page.Resources>
-
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel>
             <Border Margin="25"

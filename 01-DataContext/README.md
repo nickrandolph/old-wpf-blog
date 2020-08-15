@@ -31,7 +31,7 @@ Most data bound applications I see from users tend to use DataContext much more 
 
 **UWP/Uno Notes**
 
-In UWP it's not very common to reference the Windows of the application directly. Instead you can define static resources (in this case the instances of the GreekGod class) at the Application, Page or even Control level. For example, to make the static resource available throughout a given page, we would define them as Page Resources.
+In UWP it's not very common to reference the Window of the application directly. Instead you can define static resources (in this case the instances of the GreekGod class) at the Application, Page or even Control level. For example, to make the static resource available throughout a given page, we would define them as Page Resources.
 
     <Page.Resources>
         <local:GreekGod Name="Zeus" Description="Supreme God of the Olympians" RomanName="Jupiter" x:Key="zeus"/>
@@ -40,3 +40,6 @@ In UWP it's not very common to reference the Windows of the application directly
 
 **UWP**
 ![](Images/DataContext-uno.PNG)
+
+**WinUI Desktop**
+![](Images/DataContext-desktop.PNG)
