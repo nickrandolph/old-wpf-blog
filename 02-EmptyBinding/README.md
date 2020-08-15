@@ -43,7 +43,10 @@ Notice that none of the Binding statements inside the DataTemplate has a Source.
 ![](Images/EmptyBinding.png)
 
 **UWP**
-![](Images/EmptyBinding-uno.png)
+![](Images/EmptyBinding-uwp.png)
 
 **WASM**
 ![](Images/EmptyBinding-wasm.png)
+
+**WinUI Desktop**
+![](Images/EmptyBinding-desktop.png)

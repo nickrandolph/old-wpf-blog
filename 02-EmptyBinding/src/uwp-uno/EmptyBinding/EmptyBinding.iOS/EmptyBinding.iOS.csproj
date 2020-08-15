@@ -94,7 +94,11 @@
     <CodesignProvision>Automatic:AppStore</CodesignProvision>
     <CodesignKey>iPhone Distribution</CodesignKey>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+	<ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
+		<PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
+	</ItemGroup>
+
+	<PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
     <AppExtensionDebugBundleId />
   </PropertyGroup>
   <ItemGroup>
@@ -116,13 +120,10 @@
     <BundleResource Include="Resources\Fonts\winjs-symbols.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Uno.UI" Version="2.4.4" />
-    <PackageReference Include="Uno.UI.RemoteControl" Version="2.4.4" Condition="'$(Configuration)'=='Debug'" />
+    <PackageReference Include="Uno.UI" Version="3.0.5" />
+    <PackageReference Include="Uno.UI.RemoteControl" Version="3.0.5" Condition="'$(Configuration)'=='Debug'" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Filter" Version="1.1.1" />
-    <PackageReference Include="Xamarin.Forms">
-      <Version>4.7.0.1179</Version>
-    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Media.xcassets\AppIcons.appiconset\Contents.json">

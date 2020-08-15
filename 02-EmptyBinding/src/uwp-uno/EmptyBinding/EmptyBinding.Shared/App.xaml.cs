@@ -42,13 +42,6 @@ namespace EmptyBinding
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-            this.Resources["zeus"] = new GreekGod
-            {
-                Name = "Zeus",
-                Description = "Supreme God of the Olympians",
-                RomanName = "Jupiter"
-            };
-
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
 			{

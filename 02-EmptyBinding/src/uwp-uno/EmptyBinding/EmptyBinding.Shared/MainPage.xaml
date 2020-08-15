@@ -9,8 +9,7 @@
 
     <Page.Resources>
         <x:String x:Key="helloString">Hello</x:String>
-        <!-- POC entities don't work with Uno at the moment - see code behind in App.xaml.cs -->
-        <!--<local:GreekGod Name="Zeus" Description="Supreme God of the Olympians" RomanName="Jupiter" x:Key="zeus" />-->
+        <local:GreekGod Name="Zeus" Description="Supreme God of the Olympians" RomanName="Jupiter" x:Key="zeus" />
 
         <DataTemplate x:Key="contentTemplate">
             <StackPanel Orientation="Horizontal">
@@ -24,22 +23,24 @@
         </DataTemplate>
     </Page.Resources>
 
-    <StackPanel>
-        <Border BorderBrush="RoyalBlue"
-                BorderThickness="2"
-                Margin="25,25,25,0"
-                Padding="5"
-                DataContext="{StaticResource helloString}">
-            <TextBlock Text="{Binding}" />
-        </Border>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel>
+            <Border BorderBrush="RoyalBlue"
+                    BorderThickness="2"
+                    Margin="25,25,25,0"
+                    Padding="5"
+                    DataContext="{StaticResource helloString}">
+                <TextBlock Text="{Binding}" />
+            </Border>
 
-        <Border BorderBrush="RoyalBlue"
-                BorderThickness="2"
-                Margin="25"
-                Padding="5"
-                DataContext="{StaticResource zeus}">
-            <ContentControl Content="{Binding}"
-                            ContentTemplate="{StaticResource contentTemplate}" />
-        </Border>
-    </StackPanel>
+            <Border BorderBrush="RoyalBlue"
+                    BorderThickness="2"
+                    Margin="25"
+                    Padding="5"
+                    DataContext="{StaticResource zeus}">
+                <ContentControl Content="{Binding}"
+                                ContentTemplate="{StaticResource contentTemplate}" />
+            </Border>
+        </StackPanel>
+    </Grid>
 </Page>

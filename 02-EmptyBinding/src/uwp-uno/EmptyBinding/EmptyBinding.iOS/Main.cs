@@ -11,16 +11,16 @@ namespace EmptyBinding.iOS
 			// you can specify it here.
 			UIApplication.Main(args, null, typeof(App));
 		}
+	}
 
 #if DEBUG
-		public class HotRestartDelegate : Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
+	public class HotRestartDelegate : Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
+	{
+		public override bool FinishedLaunching(UIApplication uiApplication, Foundation.NSDictionary launchOptions)
 		{
-			public override bool FinishedLaunching(UIApplication uiApplication, Foundation.NSDictionary launchOptions)
-			{
-				Windows.UI.Xaml.Application.Start(_ => new App());
-				return base.FinishedLaunching(uiApplication, launchOptions);
-			}
+			Windows.UI.Xaml.Application.Start(_ => new App());
+			return base.FinishedLaunching(uiApplication, launchOptions);
 		}
-#endif
 	}
+#endif
 }
