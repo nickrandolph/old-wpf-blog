@@ -13,17 +13,19 @@
         </DataTemplate>
     </Page.Resources>
 
-    <Border BorderBrush="RoyalBlue"
-            BorderThickness="2"
-            Margin="25"
-            Padding="5">
-        <StackPanel>
-            <ListView ItemsSource="{Binding Source={StaticResource greekGods}}"
-                     ItemTemplate="{StaticResource itemTemplate}"
-                     Width="200"
-                     Name="listBox" />
-            <Button Click="ButtonClick"
-                    Margin="5">Get ListBoxItem</Button>
-        </StackPanel>
-    </Border>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Border BorderBrush="RoyalBlue"
+                BorderThickness="2"
+                Margin="25"
+                Padding="5">
+            <StackPanel>
+                <ListView ItemsSource="{Binding Source={StaticResource greekGods}}"
+                          ItemTemplate="{StaticResource itemTemplate}"
+                          Width="200"
+                          Name="listBox" />
+                <Button Click="ButtonClick"
+                        Margin="5">Get ListBoxItem</Button>
+            </StackPanel>
+        </Border>
+    </Grid>
 </Page>

@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetListBoxItem.iOS", "GetLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetListBoxItem.UWP", "GetListBoxItem\GetListBoxItem.UWP\GetListBoxItem.UWP.csproj", "{7685EC27-A15E-4DAF-9C1E-2B05F7BA1E1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetListBoxItem.Wasm", "GetListBoxItem\GetListBoxItem.Wasm\GetListBoxItem.Wasm.csproj", "{7C528D08-002C-4D03-9D1D-0D1889FF4070}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetListBoxItem.Wasm", "GetListBoxItem\GetListBoxItem.Wasm\GetListBoxItem.Wasm.csproj", "{7C528D08-002C-4D03-9D1D-0D1889FF4070}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetListBoxItem.macOS", "GetListBoxItem\GetListBoxItem.macOS\GetListBoxItem.macOS.csproj", "{63E3D975-57D3-432E-9927-FA64AA0E87F0}"
 EndProject
@@ -162,6 +162,7 @@ Global
 		{3C3DE99C-0CA7-4A57-B6B8-BECD33699C22}.Debug|ARM64.ActiveCfg = Debug|iPhone
 		{3C3DE99C-0CA7-4A57-B6B8-BECD33699C22}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{3C3DE99C-0CA7-4A57-B6B8-BECD33699C22}.Debug|iPhone.Build.0 = Debug|iPhone
+		{3C3DE99C-0CA7-4A57-B6B8-BECD33699C22}.Debug|iPhone.Deploy.0 = Debug|iPhone
 		{3C3DE99C-0CA7-4A57-B6B8-BECD33699C22}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{3C3DE99C-0CA7-4A57-B6B8-BECD33699C22}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{3C3DE99C-0CA7-4A57-B6B8-BECD33699C22}.Debug|x64.ActiveCfg = Debug|iPhone
