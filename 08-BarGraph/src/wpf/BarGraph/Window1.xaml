@@ -2,32 +2,39 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="BarGraph"
-	xmlns:local="clr-namespace:BarGraph"
-	SizeToContent="WidthAndHeight"
-    >
-	<Window.Resources>
-		<local:DataSource x:Key="source"/>
+        xmlns:local="clr-namespace:BarGraph"
+        SizeToContent="WidthAndHeight">
+    <Window.Resources>
+        <local:DataSource x:Key="source" />
 
-		<DataTemplate x:Key="template">
-			<StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
-				<Rectangle Height="{Binding}" Width="20" Fill="Red" />
-				<Rectangle Width="5" />
-			</StackPanel>
-		</DataTemplate>
+        <DataTemplate x:Key="template">
+            <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Bottom">
+                <Rectangle Height="{Binding}"
+                           Width="20"
+                           Fill="Red" />
+                <Rectangle Width="5" />
+            </StackPanel>
+        </DataTemplate>
 
-	</Window.Resources>
+    </Window.Resources>
 
-	<Border Margin="30" BorderBrush="Blue" BorderThickness="2" Padding="10">
-		<StackPanel>
-			<ItemsControl ItemsSource="{Binding Source={StaticResource source}, Path=ValueCollection}" 
-				ItemTemplate="{StaticResource template}" Height="130">
-				<ItemsControl.ItemsPanel>
+    <Border Margin="30"
+            BorderBrush="Blue"
+            BorderThickness="2"
+            Padding="10">
+        <StackPanel>
+            <ItemsControl ItemsSource="{Binding Source={StaticResource source}, Path=ValueCollection}"
+                          ItemTemplate="{StaticResource template}"
+                          Height="130">
+                <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-					<StackPanel Orientation="Horizontal" />
+                        <StackPanel Orientation="Horizontal" />
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
-			</ItemsControl>
-			<Button Click="ChangeData" Margin="0,5,0,0">Change data</Button>
-		</StackPanel>
-	</Border>
+            </ItemsControl>
+            <Button Click="ChangeData"
+                    Margin="0,5,0,0">Change data</Button>
+        </StackPanel>
+    </Border>
 </Window>
