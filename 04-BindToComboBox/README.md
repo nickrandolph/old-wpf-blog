@@ -30,8 +30,11 @@ This is because the generation of items for the ComboBox only happens when you o
 	ComboBoxItem cbi2 = (ComboBoxItem)(comboBox.ItemContainerGenerator.ContainerFromItem(comboBox.Items.CurrentItem));
 	comboBox.IsDropDownOpen = false;
 
+**WPF** 
 
 ![](Images/BindToComboBox.png)
+
+**UWP** 
 
 ![](Images/BindToComboBox-uwp.png)
 

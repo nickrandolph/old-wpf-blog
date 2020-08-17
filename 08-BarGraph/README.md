@@ -1,6 +1,6 @@
 # How to make a data bound bar graph
 
-A very simple bar graph can be created by combining Avalon's styling and templating features with a data bound ItemsControl. An ItemsControl is simply a control that displays a list of items. Those items can be anything you want: people, numbers, controls, and so on. If you template each item of an ItemsControl to be a rectangle whose height is bound to numerical data, you have a data bound bar graph.
+A very simple bar graph can be created by combining the styling and templating features with a data bound ItemsControl. An ItemsControl is simply a control that displays a list of items. Those items can be anything you want: people, numbers, controls, and so on. If you template each item of an ItemsControl to be a rectangle whose height is bound to numerical data, you have a data bound bar graph.
 
 The data source for this sample is a class with a property called ValueCollection of type ObservableCollection<int>. ObservableCollection<T> implements INotifyCollectionChanged, which means that if items are added/removed/replaced from that collection, the binding engine will be notified of that and the UI will be updated.
 
@@ -8,7 +8,9 @@ This is the markup for the ItemsControl:
 
 	<ItemsControl ItemsSource="{Binding Source={StaticResource source}, Path=ValueCollection}" ItemTemplate="{StaticResource template}" Height="130">
 		<ItemsControl.ItemsPanel>
-			<StackPanel Orientation="Horizontal" />
+			<ItemsPanelTemplate>
+				<StackPanel Orientation="Horizontal" />
+			</ItemsPanelTemplate>
 		</ItemsControl.ItemsPanel>
 	</ItemsControl>
 
@@ -25,4 +27,17 @@ The template for each item has a rectangle with height bound to the correspondin
 
 This is a very simple bar graph but it will hopefully give you ideas and serve as the base for more elaborate representations of data. This is the result:
 
+**WPF** 
+
 ![](Images/8BarGraph.png)
+
+
+**UWP** 
+
+![](Images/8BarGraph-uwp.png)
+
+
+**WinUI Desktop** 
+
+![](Images/8BarGraph-desktop.png)
+
