@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindToComboBox.iOS", "BindT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindToComboBox.UWP", "BindToComboBox\BindToComboBox.UWP\BindToComboBox.UWP.csproj", "{5398DAB5-2B98-4EB3-BFBD-C2AE02D813E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindToComboBox.Wasm", "BindToComboBox\BindToComboBox.Wasm\BindToComboBox.Wasm.csproj", "{5CBB0AF7-4F26-4D7F-9546-C0101DFECA3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BindToComboBox.Wasm", "BindToComboBox\BindToComboBox.Wasm\BindToComboBox.Wasm.csproj", "{5CBB0AF7-4F26-4D7F-9546-C0101DFECA3B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindToComboBox.macOS", "BindToComboBox\BindToComboBox.macOS\BindToComboBox.macOS.csproj", "{AA7FAA4D-D759-4012-B608-3CE591885726}"
 EndProject
@@ -162,6 +162,7 @@ Global
 		{3123FF9A-78D3-43F1-9DED-6A6240544230}.Debug|ARM64.ActiveCfg = Debug|iPhone
 		{3123FF9A-78D3-43F1-9DED-6A6240544230}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{3123FF9A-78D3-43F1-9DED-6A6240544230}.Debug|iPhone.Build.0 = Debug|iPhone
+		{3123FF9A-78D3-43F1-9DED-6A6240544230}.Debug|iPhone.Deploy.0 = Debug|iPhone
 		{3123FF9A-78D3-43F1-9DED-6A6240544230}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{3123FF9A-78D3-43F1-9DED-6A6240544230}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{3123FF9A-78D3-43F1-9DED-6A6240544230}.Debug|x64.ActiveCfg = Debug|iPhone

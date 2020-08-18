@@ -38,3 +38,6 @@ This is because the generation of items for the ComboBox only happens when you o
 
 ![](Images/BindToComboBox-uwp.png)
 
+**WinUI-Desktop** 
+
+![](Images/BindToComboBox-desktop.png)

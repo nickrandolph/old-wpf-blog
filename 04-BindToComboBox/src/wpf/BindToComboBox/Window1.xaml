@@ -5,25 +5,27 @@
         xmlns:local="clr-namespace:BindToComboBox"
         Title="BindToComboBox"
         SizeToContent="WidthAndHeight">
-    <Window.Resources>
-        <local:GreekGods x:Key="greekGods" />
+    <Grid>
+        <Grid.Resources>
+            <local:GreekGods x:Key="greekGods" />
 
-        <DataTemplate x:Key="itemTemplate">
-            <TextBlock Text="{Binding Path=Name}" />
-        </DataTemplate>
-    </Window.Resources>
+            <DataTemplate x:Key="itemTemplate">
+                <TextBlock Text="{Binding Path=Name}" />
+            </DataTemplate>
+        </Grid.Resources>
 
-    <Border BorderBrush="RoyalBlue"
-            BorderThickness="2"
-            Margin="25"
-            Padding="5">
-        <StackPanel>
-            <Button Click="ButtonClick"
-                    Margin="5">Get ComboBoxItem</Button>
-            <ComboBox ItemsSource="{StaticResource greekGods}"
-                      ItemTemplate="{StaticResource itemTemplate}"
-                      Width="200"
-                      Name="comboBox" />
-        </StackPanel>
-    </Border>
+        <Border BorderBrush="RoyalBlue"
+                BorderThickness="2"
+                Margin="25"
+                Padding="5">
+            <StackPanel>
+                <Button Click="ButtonClick"
+                        Margin="5">Get ComboBoxItem</Button>
+                <ComboBox ItemsSource="{StaticResource greekGods}"
+                          ItemTemplate="{StaticResource itemTemplate}"
+                          Width="200"
+                          Name="comboBox" />
+            </StackPanel>
+        </Border>
+    </Grid>
 </Window>
