@@ -2,7 +2,7 @@
 
 I will show you two ways of syncing the selection of two data bound ListBoxes.
 
-In the first solution, I will create a custom view over the collection and bind both ListBoxes to it. Views track the current item of their underlying collection, and allow us to sort, group and filter their items. CollectionViewSource is a new class introduced in September CTP that makes it possible to create a custom view in markup. Because the custom view created tracks the current item of the collection, and currency and selection are in sync in this scenario, binding both ListBoxes to the same view causes their selected items to be in sync.
+In the first solution, I will create a custom view over the collection and bind both ListBoxes to it. Views track the current item of their underlying collection, and allow us to sort, group and filter their items. CollectionViewSource is a new class that makes it possible to create a custom view in markup. Because the custom view created tracks the current item of the collection, and currency and selection are in sync in this scenario, binding both ListBoxes to the same view causes their selected items to be in sync.
 
 	<Window.Resources>
 		<local:GreekGods x:Key="source" />
@@ -24,4 +24,20 @@ The data team made the default synchronization behavior be different for custom 
 
 In the image below, the first and second ListBoxes are bound to the CollectionViewSource and the third and fourth ones have InSynchronizedWithCurrentItem set to true.
 
+**WPF**
+
 ![](Images/9CollectionViewSourceSample.png)
+
+**Uwp/Uno/WinUI**
+Whilst the InSynchronizedWithCurrentItem property still exists on the ListBox, attempting to set this causes either a runtime exception (UWP) or a XAML parsing error (WinUI). 
+CollectionViewSource is supported by UWP and WinUI for UWP but is currently not supported across other platforms via Uno. The application will build and run on those platforms. However, selection on the ListBox will not work and won't be synchronised across the ListBoxes
+
+
+**WinUI - UWP**
+
+![](Images/9CollectionViewSourceSample-uwp.png)
+
+
+**WinUI - Desktop**
+
+![](Images/9CollectionViewSourceSample-desktop.png)
