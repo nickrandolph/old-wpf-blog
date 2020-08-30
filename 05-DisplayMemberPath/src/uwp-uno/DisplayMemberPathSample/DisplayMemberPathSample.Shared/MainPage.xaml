@@ -15,19 +15,22 @@
         </DataTemplate>
     </Page.Resources>
 
-    <Border BorderBrush="RoyalBlue"
-            BorderThickness="2"
-            Margin="25"
-            Padding="5">
-        <StackPanel Orientation="Horizontal">
-            <ItemsControl ItemsSource="{StaticResource greekGods}"
-                          ItemTemplate="{StaticResource itemTemplate}"
-                          Width="150"
-                          Name="itemsControl1" />
-            <ItemsControl ItemsSource="{StaticResource greekGods}"
-                          DisplayMemberPath="Name"
-                          Width="150"
-                          Name="itemsControl2" />
-        </StackPanel>
-    </Border>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Border BorderBrush="RoyalBlue"
+                BorderThickness="2"
+                Margin="25"
+                Padding="5">
+            <StackPanel Orientation="Horizontal">
+                <ItemsControl ItemsSource="{StaticResource greekGods}"
+                              ItemTemplate="{StaticResource itemTemplate}"
+                              Width="150"
+                              Name="itemsControl1" />
+                <ItemsControl ItemsSource="{StaticResource greekGods}"
+                              DisplayMemberPath="Name"
+                              Width="150"
+                              Name="itemsControl2" />
+            </StackPanel>
+        </Border>
+    </Grid>
 </Page>

@@ -19,7 +19,14 @@ It's that easy :)
 The image below shows both versions of the ItemsControl, the one on the left is using DataTemplate and the one on the right is using DisplayMemberPath.
 
 **WPF**
+
 ![](Images/DisplayMemberPathSample.png)
 
 **UWP**
+
 ![](Images/DisplayMemberPathSample-uwp.png)
+
+**WinUI - Desktop**
+
+![](Images/DisplayMemberPathSample-desktop.png)
+
