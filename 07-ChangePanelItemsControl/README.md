@@ -64,3 +64,8 @@ There is also no support for binding using an XPath expression. For this a simpl
 
 ![](Images/ChangePanelItemsControl-uwp.png)
 
+**WinUI - Desktop**
+
+![](Images/ChangePanelItemsControl-desktop.png)
+
+

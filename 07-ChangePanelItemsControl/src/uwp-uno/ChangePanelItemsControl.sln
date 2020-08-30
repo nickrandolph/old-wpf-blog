@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangePanelItemsControl.iOS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangePanelItemsControl.UWP", "ChangePanelItemsControl\ChangePanelItemsControl.UWP\ChangePanelItemsControl.UWP.csproj", "{44624EDE-0900-4EC2-A0FB-DE61D2478AB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangePanelItemsControl.Wasm", "ChangePanelItemsControl\ChangePanelItemsControl.Wasm\ChangePanelItemsControl.Wasm.csproj", "{C37B2317-945C-44C7-A12C-EE465244A120}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChangePanelItemsControl.Wasm", "ChangePanelItemsControl\ChangePanelItemsControl.Wasm\ChangePanelItemsControl.Wasm.csproj", "{C37B2317-945C-44C7-A12C-EE465244A120}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangePanelItemsControl.macOS", "ChangePanelItemsControl\ChangePanelItemsControl.macOS\ChangePanelItemsControl.macOS.csproj", "{BCE0D31A-BBAC-4216-956B-74ADC8721178}"
 EndProject
@@ -162,6 +162,7 @@ Global
 		{87F69A62-A666-4E83-880C-F5BEDCD04168}.Debug|ARM64.ActiveCfg = Debug|iPhone
 		{87F69A62-A666-4E83-880C-F5BEDCD04168}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{87F69A62-A666-4E83-880C-F5BEDCD04168}.Debug|iPhone.Build.0 = Debug|iPhone
+		{87F69A62-A666-4E83-880C-F5BEDCD04168}.Debug|iPhone.Deploy.0 = Debug|iPhone
 		{87F69A62-A666-4E83-880C-F5BEDCD04168}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{87F69A62-A666-4E83-880C-F5BEDCD04168}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{87F69A62-A666-4E83-880C-F5BEDCD04168}.Debug|x64.ActiveCfg = Debug|iPhone

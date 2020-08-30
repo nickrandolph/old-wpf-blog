@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectedValueSample.iOS", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectedValueSample.UWP", "SelectedValueSample\SelectedValueSample.UWP\SelectedValueSample.UWP.csproj", "{A17329CB-3DA6-44CE-81F3-0A9D0B4790BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectedValueSample.Wasm", "SelectedValueSample\SelectedValueSample.Wasm\SelectedValueSample.Wasm.csproj", "{8930386F-2203-4CD4-A44F-AC65DF68D9EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelectedValueSample.Wasm", "SelectedValueSample\SelectedValueSample.Wasm\SelectedValueSample.Wasm.csproj", "{8930386F-2203-4CD4-A44F-AC65DF68D9EE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectedValueSample.macOS", "SelectedValueSample\SelectedValueSample.macOS\SelectedValueSample.macOS.csproj", "{97514DDC-74EE-425C-89CA-E2ADEFFA8BAB}"
 EndProject
@@ -162,6 +162,7 @@ Global
 		{67993ABB-2B01-4E2C-8182-F634C9CD2BF0}.Debug|ARM64.ActiveCfg = Debug|iPhone
 		{67993ABB-2B01-4E2C-8182-F634C9CD2BF0}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{67993ABB-2B01-4E2C-8182-F634C9CD2BF0}.Debug|iPhone.Build.0 = Debug|iPhone
+		{67993ABB-2B01-4E2C-8182-F634C9CD2BF0}.Debug|iPhone.Deploy.0 = Debug|iPhone
 		{67993ABB-2B01-4E2C-8182-F634C9CD2BF0}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{67993ABB-2B01-4E2C-8182-F634C9CD2BF0}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{67993ABB-2B01-4E2C-8182-F634C9CD2BF0}.Debug|x64.ActiveCfg = Debug|iPhone

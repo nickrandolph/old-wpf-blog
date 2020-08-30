@@ -31,3 +31,7 @@ If you have ideas of how to combine these two properties in one, we would love t
 **UWP**
 
 ![](Images/SelectedValueSample-uwp.png)
+
+**WinUI - Desktop**
+
+![](Images/SelectedValueSample-desktop.png)
