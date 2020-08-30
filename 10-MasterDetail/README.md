@@ -4,7 +4,7 @@ In the simplest master-detail scenario, clicking a particular item of an ItemsCo
 
 In this post I will use a data source with the planets of the solar system: clicking on the name of a planet in the ListBox causes its picture and information to be displayed in a templated ContentControl. The ListBox plays the role of the master and the ContentControl presents the detail.
 
-In the resources section of the Window, I have an XmlDataProvider with the planet data and a CollectionViewSource with the Source property bound to the provider (for more information about CollectionViewSource see my previous post). Here is the markup for the ListBox bound to the CollectionViewSource:
+In the resources section of the Window, I have an XmlDataProvider with the planet data and a CollectionViewSource with the Source property bound to the provider. Here is the markup for the ListBox bound to the CollectionViewSource:
 
 	<!-- master -->
 	<ListBox ItemsSource="{Binding Source={StaticResource cvs}}" DisplayMemberPath="@Name" Padding="5" Margin="0,0,5,0"/>
@@ -37,4 +37,31 @@ To specify how the details of the planet data should be displayed in the Content
 
 Here is a screen shot of the completed sample:
 
+**WPF**
+
 ![](Images/10MasterDetail.png)
+
+**Uno Notes**
+Because the CollectionViewSource isn't support across the different Uno platforms, I've data bound the SelectedItem on the ListView to a property on the MainPage, which in turn updates the Content property on the ContentControl. This only applies to the Non-UWP platforms.
+
+You'll also note that unlike in my previous post, where I used an XmlElementConverter, in this example I've used an XmlWrapper. This leads to binding expressions that are closer to what's in the original post as it allows for traversing the element and attributes on the Xml that's loaded from the associated data file.
+
+**UWP**
+
+![](Images/10MasterDetail-uwp.png)
+
+**Uno-WASM**
+
+![](Images/10MasterDetail-wasm.png)
+
+**WinUI Notes**
+Whilst WinUI for Desktop is very close to WPF, it doesn't include the XmlDataProvider. Similar to the Uno project, we've used an embedded xml file instead of the inline data. 
+
+**WinUI-Desktop**
+
+![](Images/10MasterDetail-desktop.png)
+
+
+
+
+

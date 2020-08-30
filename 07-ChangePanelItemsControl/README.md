@@ -56,7 +56,7 @@ The only thing to keep in mind when binding to XML is that instead of using the 
 
 **UWP/Uno Notes**
 
-The XmlDataProvider doesn't exist for UWP applications. Instead the GreekGods XML data has been added as an XML file with build action of Embedded Resource. 
+The XmlDataProvider doesn't exist for UWP applications. Instead the GreekGods XML data has been added as an XML file with build action of Embedded Resource. The data is loaded on startup and set as the ItemsSource for each ListBox. 
 
 There is also no support for binding using an XPath expression. For this a simple XmlElementConverter has been added.
 

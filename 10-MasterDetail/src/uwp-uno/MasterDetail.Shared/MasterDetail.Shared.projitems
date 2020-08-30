@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>6279c845-92f8-4333-ab99-3d213163593c</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MasterDetail.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)StringToImageSourceConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SolarSystemPlanetsData.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)2moons_2.gif" />
+    <Content Include="$(MSBuildThisFileDirectory)earglobe.gif" />
+    <Content Include="$(MSBuildThisFileDirectory)jupglobe.gif" />
+    <Content Include="$(MSBuildThisFileDirectory)marglobe.gif" />
+    <Content Include="$(MSBuildThisFileDirectory)merglobe.gif" />
+    <Content Include="$(MSBuildThisFileDirectory)nepglobe.gif" />
+    <Content Include="$(MSBuildThisFileDirectory)plutoch_2.gif" />
+    <Content Include="$(MSBuildThisFileDirectory)uraglobe.gif" />
+    <Content Include="$(MSBuildThisFileDirectory)venglobe.gif" />
+  </ItemGroup>
+</Project>
