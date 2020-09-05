@@ -2,7 +2,7 @@
 
 The master-detail scenario with more than 2 levels is very common, and we made sure we have good support for it in WPF. I will show in this post three ways to sync selection of three ListBoxes, each displaying a different level of a hierarchy of data. In this sample, the first ListBox displays a list of mountain ski resorts. When the user selects a ski resort, the second ListBox gets updated with several lifts from that mountain. By selecting a particular lift, the third ListBox gets updated with ski runs that can be taken down from the top of that lift.
 
-Here is the approach most people take when trying to get this scenario to work:
+Here is the approach some developers might take when trying to get this scenario to work:
 
 	<Window.Resources>
 		<local:Mountains x:Key="mountains" />
@@ -12,7 +12,7 @@ Here is the approach most people take when trying to get this scenario to work:
 	<ListBox ItemsSource="{Binding Source={StaticResource cvs}, Path=Lifts}" DisplayMemberPath="Name" Name="lb2" />
 	<ListBox ItemsSource="{Binding Source={StaticResource cvs}, Path=Lifts/Runs}" Name="lb3" />
 
-Unfortunately this does not work as expected: lb1 and lb2 are in sync but lb3 is not. When creating a custom view on top of a collection by using CollectionViewSource, selection and currency are in sync by default (more details can be found in my November 10 post). This is why lb1 and lb2 are in sync in this scenario. This markup does not use a custom view for the Lifts collection though - a default view is created internally instead. Default views do not have currency and selection in sync by default, which is the reason why lb2 and lb3 don't sync.
+Unfortunately this does not work as expected: lb1 and lb2 are in sync but lb3 is not. When creating a custom view on top of a collection by using CollectionViewSource, selection and currency are in sync by default. This is why lb1 and lb2 are in sync in this scenario. This markup does not use a custom view for the Lifts collection though - a default view is created internally instead. Default views do not have currency and selection in sync by default, which is the reason why lb2 and lb3 don't sync.
 
 There are at least three ways to have the three ListBoxes in sync.
 
@@ -38,10 +38,29 @@ The third solution is to rely simply on the items displayed in the previous List
 	<ListBox DataContext="{Binding ElementName=lb1, Path=Items}" ItemsSource="{Binding Path=Lifts}" DisplayMemberPath="Name" Name="lb2" IsSynchronizedWithCurrentItem="True"/>
 	<ListBox DataContext="{Binding ElementName=lb2, Path=Items}" ItemsSource="{Binding Path=Runs}" Name="lb3" IsSynchronizedWithCurrentItem="True"/>
 
-In the markup above, we set the DataContext of the second ListBox to the first ListBox's Items property. Because DataContext is not expecting a collection, internally the binding engine returns the current item of that collection (more details in my previous post). We can then bind the ItemsSource to the Lifts property of the current Mountain, which returns the list we want.
+In the markup above, we set the DataContext of the second ListBox to the first ListBox's Items property. Because DataContext is not expecting a collection, internally the binding engine returns the current item of that collection. We can then bind the ItemsSource to the Lifts property of the current Mountain, which returns the list we want.
 
 This sample uses CLR objects as the data source. When using an XML data source, note that only the third solution above will work (for reasons I won't go into here).
 
 Here is a screen shot of the completed sample:
 
+**WPF**
+
 ![](Images/11MasterDetailThreeLevels.png)
+
+**UWP/Uno/WinUI Notes**
+
+It's highly recommended that you do NOT use the ISynchronizedWithCurrentItem as it's likely to cause runtime errors. The Items collection doesn't maintains a CurrentItem, instead use SelectedItem on the ListBox/ListView instead. It's recommended to use the ListView control rather than the older ListBox control
+
+**UWP**
+
+![](Images/11MasterDetailThreeLevels-uwp.png)
+
+**WASM**
+
+![](Images/11MasterDetailThreeLevels-wasm.png)
+
+
+**WinUI - Desktop**
+
+![](Images/11MasterDetailThreeLevels-desktop.png)
