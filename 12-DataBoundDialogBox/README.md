@@ -39,4 +39,32 @@ The logic for the "OK" button is simple, but the "Cancel" is even simpler. Becau
 
 Here is a screen shot of the completed sample:
 
+**WPF**
+
 ![](Images/DataBoundDialogBox.png)
+
+**UWP Notes**
+The WPF code relies on what seems like magic in order to update the content on the Main page. For those familiar with XAML binding you may be surprised that this example works given that the DataSource class doesn't implement INotifyPropertyChanged. There are definitely smarts built into WPF that will update all elements bound to the same source if one of its properties are updated, such as the case in this example. This does NOT work with UWP where you have to be explicit about raising PropertyChanged event in order for any elements bound to the source to update.
+
+UWP also requires that the Mode of the Binding for the two TextBox elements be set to TwoWay
+
+Additionally, the UWP ContentDialog has built in primary and secondary buttons to encourage a standard look and feel for dialogs. 
+
+**Uno Notes**
+Currently the UpdateSourceTrigger attribute of the Binding expression isn't respected. This means that any changes made in the dialog will be updated in the main page.
+
+**UWP**
+
+![](Images/DataBoundDialogBox-uwp.png)
+
+**WinUI Notes**
+
+WinUI for Desktop, whilst respecting the UpdateSourceTrigger attribute, ends up looking more like UWP than WPF. The dialog needs to inherit from ContentDialog. There's a need to explicitly set the XamlRoot and for some reason typing in the TextBox elements doesn't work.
+
+WinUI for UWP has issues with databound properties being changed in a ContentDialog and having to update on the main page. This is most likely a prerelease issue. Ironically the Uno platforms all update the content but again ignore the UpdateSourceTrigger attribute.
+
+**WinUI - Desktop**
+
+![](Images/DataBoundDialogBox-desktop.png)
+
+

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30420.98
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBoundDialogBox", "DataBoundDialogBox\DataBoundDialogBox.csproj", "{141907C8-4FE7-4358-B588-905530AE1A89}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{141907C8-4FE7-4358-B588-905530AE1A89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{141907C8-4FE7-4358-B588-905530AE1A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{141907C8-4FE7-4358-B588-905530AE1A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{141907C8-4FE7-4358-B588-905530AE1A89}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CAA3A6FA-82C2-45A5-BB14-CA7A88089246}
+	EndGlobalSection
+EndGlobal
