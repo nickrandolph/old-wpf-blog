@@ -2,6 +2,7 @@ using UIKit;
 
 namespace DebuggingDataBinding.iOS
 {
+{
 	public class Application
 	{
 		// This is the main entry point of the application.
@@ -12,4 +13,15 @@ namespace DebuggingDataBinding.iOS
 			UIApplication.Main(args, null, typeof(App));
 		}
 	}
+
+#if DEBUG
+	public class HotRestartDelegate : Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
+	{
+		public override bool FinishedLaunching(UIApplication uiApplication, Foundation.NSDictionary launchOptions)
+		{
+			Microsoft.UI.Xaml.Application.Start(_ => new App());
+			return base.FinishedLaunching(uiApplication, launchOptions);
+		}
+	}
+#endif
 }

@@ -92,7 +92,7 @@
     <CodesignProvision>Automatic:AppStore</CodesignProvision>
     <CodesignKey>iPhone Distribution</CodesignKey>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+  <ItemGroup Condition=" '$(Configuration)' == 'Debug' "><PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" /></ItemGroup><PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
     <AppExtensionDebugBundleId />
   </PropertyGroup>
   <ItemGroup>
