@@ -10,7 +10,7 @@ namespace GroupingTreeView
     /// Interaction logic for MyApp.xaml
     /// </summary>
 
-    public partial class MyApp : Application
+    public partial class App : Application
     {
 
     }

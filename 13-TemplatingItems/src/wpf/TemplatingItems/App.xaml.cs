@@ -6,7 +6,7 @@ using System.Configuration;
 
 namespace TemplatingItems
 {
-    public partial class MyApp : Application
+    public partial class App : Application
     {
         void AppStartingUp(object sender, EventArgs e)
         {

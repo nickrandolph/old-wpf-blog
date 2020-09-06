@@ -4,13 +4,13 @@ using System.Data;
 using System.Xml;
 using System.Configuration;
 
-namespace SortingGroups
+namespace GroupingTreeView
 {
     /// <summary>
     /// Interaction logic for MyApp.xaml
     /// </summary>
 
-    public partial class MyApp : Application
+    public partial class App : Application
     {
 
     }
