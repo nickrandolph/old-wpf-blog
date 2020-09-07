@@ -4,4 +4,48 @@
 		<TargetFrameworks>net4.7.2;netcoreapp3.1;net5.0</TargetFrameworks>
 		<UseWPF>true</UseWPF>
 	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="2moons_2.gif" />
+	  <None Remove="earglobe.gif" />
+	  <None Remove="jupglobe.gif" />
+	  <None Remove="marglobe.gif" />
+	  <None Remove="merglobe.gif" />
+	  <None Remove="nepglobe.gif" />
+	  <None Remove="planetx.jpg" />
+	  <None Remove="plutoch_2.gif" />
+	  <None Remove="uraglobe.gif" />
+	  <None Remove="venglobe.gif" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="2moons_2.gif">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="earglobe.gif">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="jupglobe.gif">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="marglobe.gif">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="merglobe.gif">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="nepglobe.gif">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="planetx.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="plutoch_2.gif">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="uraglobe.gif">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="venglobe.gif">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
 </Project>

@@ -1,40 +1,44 @@
-﻿<?Mapping XmlNamespace="local" ClrNamespace="GroupByType"?>
-<Window x:Class="GroupByType.Window1"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="GroupByType"
-    xmlns:local="local"
-    SizeToContent="WidthAndHeight"
-    >
-	<Window.Resources>
-		<local:GreekGodsAndHeroes x:Key="GodsAndHeroes" />
-		<local:GroupByTypeConverter x:Key="GroupByTypeConverter"/>
-		<local:GodHeroTemplateSelector x:Key="GodHeroTemplateSelector" />
-		
-		<CollectionViewSource x:Key="cvs" Source="{Binding Source={StaticResource GodsAndHeroes}}">
-			<CollectionViewSource.GroupDescriptions>
-				<PropertyGroupDescription Converter="{StaticResource GroupByTypeConverter}"/>
-			</CollectionViewSource.GroupDescriptions>
-		</CollectionViewSource>
+﻿<Window x:Class="GroupByType.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="GroupByType"
+        xmlns:local="clr-namespace:GroupByType"
+        SizeToContent="WidthAndHeight">
+    <Window.Resources>
+        <local:GreekGodsAndHeroes x:Key="GodsAndHeroes" />
+        <local:GroupByTypeConverter x:Key="GroupByTypeConverter" />
+        <local:GodHeroTemplateSelector x:Key="GodHeroTemplateSelector" />
 
-		<HierarchicalDataTemplate x:Key="GroupTemplate" ItemsSource="{Binding Path=Items}">
-			<TextBlock Text="{Binding Path=Name}" FontWeight="Bold"/>
-		</HierarchicalDataTemplate>
+        <CollectionViewSource x:Key="cvs"
+                              Source="{Binding Source={StaticResource GodsAndHeroes}}">
+            <CollectionViewSource.GroupDescriptions>
+                <PropertyGroupDescription Converter="{StaticResource GroupByTypeConverter}" />
+            </CollectionViewSource.GroupDescriptions>
+        </CollectionViewSource>
 
-		<DataTemplate x:Key="GreekGodTemplate">
-			<TextBlock Text="{Binding Path=GodName}"/>
-		</DataTemplate>
+        <HierarchicalDataTemplate x:Key="GroupTemplate"
+                                  ItemsSource="{Binding Path=Items}">
+            <TextBlock Text="{Binding Path=Name}"
+                       FontWeight="Bold" />
+        </HierarchicalDataTemplate>
 
-		<DataTemplate x:Key="GreekHeroTemplate">
-			<TextBlock Text="{Binding Path=HeroName}"/>
-		</DataTemplate>
-	</Window.Resources>
+        <DataTemplate x:Key="GreekGodTemplate">
+            <TextBlock Text="{Binding Path=GodName}" />
+        </DataTemplate>
 
-	<Border Margin="30" BorderBrush="Blue" BorderThickness="2" Padding="10">
-		<TreeView ItemsSource="{Binding Source={StaticResource cvs}, Path=Groups}" 
-			ItemTemplateSelector="{StaticResource GodHeroTemplateSelector}"
-			Width="200">
-		</TreeView>
-	</Border>
+        <DataTemplate x:Key="GreekHeroTemplate">
+            <TextBlock Text="{Binding Path=HeroName}" />
+        </DataTemplate>
+    </Window.Resources>
+
+    <Border Margin="30"
+            BorderBrush="Blue"
+            BorderThickness="2"
+            Padding="10">
+        <TreeView ItemsSource="{Binding Source={StaticResource cvs}, Path=Groups}"
+                  ItemTemplateSelector="{StaticResource GodHeroTemplateSelector}"
+                  Width="200">
+        </TreeView>
+    </Border>
 
 </Window>

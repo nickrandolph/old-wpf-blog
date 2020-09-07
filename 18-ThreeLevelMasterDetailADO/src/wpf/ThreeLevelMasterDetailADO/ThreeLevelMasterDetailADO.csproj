@@ -4,4 +4,15 @@
 		<TargetFrameworks>net4.7.2;netcoreapp3.1;net5.0</TargetFrameworks>
 		<UseWPF>true</UseWPF>
 	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="SkiMountains.mdb" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="SkiMountains.mdb">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="System.Data.OleDb" Version="4.7.1" />
+	</ItemGroup>
 </Project>

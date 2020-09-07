@@ -1,6 +1,6 @@
 # How to display grouped data in a TreeView
 
-The TreeView control is great at displaying structured data using the HierarchicalDataTemplate (see <a href="http://blogs.msdn.com/karstenj/archive/2005/11/02/488420.aspx">Karsten's blog post</a> on this topic). But what do you do if the data you're given is not structured hierarchically? In this post, I will show you how to create that hierarchy from a flat list of data items, using the grouping feature of data binding.
+The TreeView control is great at displaying structured data using the HierarchicalDataTemplate (see <a href="https://docs.microsoft.com/en-us/archive/blogs/karstenj/hierarchicaldatatemplate-recursive-avalon-data-binding">Karsten's blog post</a> on this topic). But what do you do if the data you're given is not structured hierarchically? In this post, I will show you how to create that hierarchy from a flat list of data items, using the grouping feature of data binding.
 
 I am using the same Animal data source I used in my last post. Grouping the Animals by Category is done the same way as in my last sample:
 
