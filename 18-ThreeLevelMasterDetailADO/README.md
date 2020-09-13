@@ -72,4 +72,9 @@ The data binding team has been discussing whether or not we should change this b
 
 If you want an opportunity to help shape Avalon, I would love to hear your opinions on this issue (note that if the current behavior changes, it will be in the Avalon V2 timeframe only).
 
+**Notes**
+The code has been updated to use the Microsoft.ACE.OLEDB.12.0 provider instead of the older Microsoft.Jet.OLEDB.4.0. It's also been updated to use the latest System.Data.OleDb nuget package instead of just a reference to the .NET Framework assembly.
+
+In order for this code to run, you need to install the Microsoft Access Database Engine. The 2016 version is available at https://www.microsoft.com/en-us/download/details.aspx?id=54920
+
 ![](Images/ThreeLevelMasterDetailADO.png)

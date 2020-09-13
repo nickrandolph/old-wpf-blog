@@ -4,4 +4,52 @@
 		<TargetFrameworks>net4.7.2;netcoreapp3.1;net5.0</TargetFrameworks>
 		<UseWPF>true</UseWPF>
 	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="Pictures\TechEd 004.jpg" />
+	  <None Remove="Pictures\TechEd 022.jpg" />
+	  <None Remove="Pictures\TechEd 029.jpg" />
+	  <None Remove="Pictures\TechEd 030.jpg" />
+	  <None Remove="Pictures\TechEd 051.jpg" />
+	  <None Remove="Pictures\TechEd 061.jpg" />
+	  <None Remove="Pictures\TechEd 066.jpg" />
+	  <None Remove="Pictures\TechEd 074.jpg" />
+	  <None Remove="Pictures\TechEd 075.jpg" />
+	  <None Remove="Pictures\TechEd 077.jpg" />
+	  <None Remove="Pictures\TechEd 082.jpg" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="Pictures\TechEd 004.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Pictures\TechEd 022.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Pictures\TechEd 029.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Pictures\TechEd 030.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Pictures\TechEd 051.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Pictures\TechEd 061.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Pictures\TechEd 066.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Pictures\TechEd 074.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Pictures\TechEd 075.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Pictures\TechEd 077.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Pictures\TechEd 082.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
 </Project>
