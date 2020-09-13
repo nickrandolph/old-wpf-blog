@@ -83,4 +83,19 @@ Sure, a DataTemplateSelector could be used to template the items by picking the 
 
 Here is a screen shot of the completed sample:
 
+**WPF**
+
 ![](Images/13TemplatingItems.png)
+
+**UWP/Uno Notes**
+
+There is no support for implicit templating based on the type of data object. I've added an additional template selector which uses the type of the object to determine which template to use. The DataType attribute on the templates has been used to support x:Bind instead of Binding.
+
+**UWP**
+
+![](Images/13TemplatingItems-uwp.png)
+
+
+**WinUI - Desktop**
+
+![](Images/13TemplatingItems-desktop.png)

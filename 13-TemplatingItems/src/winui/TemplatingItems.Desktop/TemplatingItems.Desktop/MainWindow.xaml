@@ -7,7 +7,70 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-    </StackPanel>
+	<Grid>
+		<Grid.Resources>
+			<local:Places x:Key="places" />
+			<local:GreekGodsAndHeros x:Key="godsAndHeros" />
+
+			<DataTemplate x:Key="washingtonTemplate">
+				<Border Background="Lavender">
+					<TextBlock Text="{Binding Path=Name}"
+							   Foreground="CornFlowerBlue"
+							   FontWeight="Bold" />
+				</Border>
+			</DataTemplate>
+
+			<DataTemplate x:Key="notWashingtonTemplate">
+				<TextBlock Text="{Binding Path=Name}"
+						   Foreground="DarkSeaGreen" />
+			</DataTemplate>
+
+			<DataTemplate x:DataType="local:GreekGod"
+						  x:Key="greekGodTemplate">
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="100" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<TextBlock Text="{x:Bind GodName}"
+							   Grid.Column="0"
+							   Grid.Row="0"
+							   Foreground="Brown" />
+					<TextBlock Text="{x:Bind GodDescription}"
+							   Grid.Column="1"
+							   Grid.Row="0"
+							   Foreground="Brown" />
+				</Grid>
+			</DataTemplate>
+
+			<DataTemplate x:DataType="local:GreekHero"
+						  x:Key="greekHeroTemplate">
+				<TextBlock Text="{x:Bind HeroName}"
+						   FontWeight="Bold"
+						   Foreground="Red" />
+			</DataTemplate>
+
+			<local:PlaceTemplateSelector WashingtonTemplate="{StaticResource washingtonTemplate}"
+										 NotWashingtonTemplate="{StaticResource notWashingtonTemplate}"
+										 x:Key="placeTemplateSelector" />
+			<local:GreekTemplateSelector GreekGodTemplate="{StaticResource greekGodTemplate}"
+										 GreekHeroTemplate="{StaticResource greekHeroTemplate}"
+										 x:Key="greekTemplateSelector" />
+
+
+		</Grid.Resources>
+
+		<Border Margin="30"
+                BorderBrush="Blue"
+                BorderThickness="2">
+			<StackPanel HorizontalAlignment="Left">
+				<ListBox ItemsSource="{Binding Source={StaticResource places}}"
+                         ItemTemplateSelector="{StaticResource placeTemplateSelector}"
+                         Margin="10" />
+				<ListBox ItemsSource="{Binding Source={StaticResource godsAndHeros}}"
+                         ItemTemplateSelector="{StaticResource greekTemplateSelector}"
+                         Margin="10" />
+			</StackPanel>
+		</Border>
+	</Grid>
 </Window>
