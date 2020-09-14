@@ -7,7 +7,37 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.Resources>
+        <CollectionViewSource x:Key="cvs"
+                              IsSourceGrouped="True" />
+
+        <DataTemplate x:Key="categoryTemplate">
+            <TextBlock Text="{Binding Path=Key}"
+                       FontWeight="Bold"
+                       Foreground="ForestGreen"
+                       Margin="0,5,0,0" />
+        </DataTemplate>
+
+        <DataTemplate x:Key="animalTemplate">
+            <TextBlock Text="{Binding Path=Name}"
+                       Foreground="MediumSeaGreen" />
+        </DataTemplate>
+
+    </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-		<TextBlock Text="Hello, world!" Margin="20" FontSize="30" />
+
+
+        <Border Margin="30"
+                BorderBrush="Blue"
+                BorderThickness="2"
+                Padding="10">
+            <ItemsControl ItemsSource="{Binding Source={StaticResource cvs}}"
+                          Width="200"
+                          ItemTemplate="{StaticResource animalTemplate}">
+                <ItemsControl.GroupStyle>
+                    <GroupStyle HeaderTemplate="{StaticResource categoryTemplate}" />
+                </ItemsControl.GroupStyle>
+            </ItemsControl>
+        </Border>
     </Grid>
 </Page>

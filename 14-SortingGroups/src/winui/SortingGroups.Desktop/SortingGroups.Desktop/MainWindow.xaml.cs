@@ -26,11 +26,14 @@ namespace SortingGroups.Desktop
         public MainWindow()
         {
             this.InitializeComponent();
-        }
 
-        private void myButton_Click(object sender, RoutedEventArgs e)
-        {
-            myButton.Content = "Clicked";
+            var animals = new Animals().AnimalList;
+            var groupedAnimals = from animal in animals
+                                 orderby animal.Name
+                                 group animal by animal.Category into g
+                                 orderby g.Key
+                                 select g;
+            ((this.Content as Grid).Resources["cvs"] as CollectionViewSource).Source = groupedAnimals;
         }
     }
 }

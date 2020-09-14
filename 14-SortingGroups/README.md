@@ -54,4 +54,23 @@ Adding two sort descriptions allows us to sort the groups first and then the ite
 
 This is a screenshot of the completed sample:
 
+**WPF**
+
 ![](Images/14SortingGroups.png)
+
+**UWP Notes**
+The UWP CollectionViewSource doesn't support grouping or sort, requiring the underlying data source to be grouped and sorted in advance.
+
+**UWP**
+
+![](Images/14SortingGroups-uwp.png)
+
+**Uno Notes**
+The Uno CollectionViewSource doesn't handle grouped data source. Instead it presents the items in a single list.
+
+**WinUI Notes**
+The WinUI CollectionViewSource for both desktop and UWP is similar to the UWP implementation. As such it requires the data source to be grouped and sorted in advance.
+
+**WinUI - Desktop**
+
+![](Images/14SortingGroups-desktop.png)
