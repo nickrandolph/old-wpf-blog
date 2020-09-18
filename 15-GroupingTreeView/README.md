@@ -33,4 +33,20 @@ Finally we need a DataTemplate for the leaf nodes, which specifies how we want t
 
 Here is the result of the completed sample:
 
+**WPF**
+
 ![](Images/15GroupingTreeView.png)
+
+**UWP/Uno Notes**
+Since UWP (and thus Uno and WinUI) doesn't support grouping in the CollectionViewSource, we've provided an alternative implementation that makes use of Linq's IGrouping and an ItemTemplateSelector to switch between templates based on whether it's a Category or an Animal node in the tree.
+
+Uno doesn't currently support the TreeView, but it's expected to land in the v3.1 timeframe.
+
+**UWP**
+
+![](Images/15GroupingTreeView-uwp.png)
+
+
+**WinUI - Desktop**
+
+![](Images/15GroupingTreeView-desktop.png)

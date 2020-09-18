@@ -28,9 +28,16 @@ namespace GroupingTreeView.Desktop
             this.InitializeComponent();
         }
 
-        private void myButton_Click(object sender, RoutedEventArgs e)
+        
+    }
+
+    public class TreeItemTemplateSelector : DataTemplateSelector
+    {
+        public DataTemplate CategoryTemplate { get; set; }
+        public DataTemplate AnimalTemplate { get; set; }
+        protected override DataTemplate SelectTemplateCore(object item)
         {
-            myButton.Content = "Clicked";
+            return (item is Animal) ? AnimalTemplate : CategoryTemplate;
         }
     }
 }

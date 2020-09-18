@@ -6,8 +6,35 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Resources>
+        <local:CategorisedAnimals x:Key="groupedAnimals" />
 
+        <DataTemplate x:Key="animalTemplate">
+            <TextBlock Text="{Binding Name}" />
+        </DataTemplate>
+
+        <DataTemplate x:Key="categoryTemplate">
+            <TreeViewItem ItemsSource="{Binding}">
+                <TextBlock Text="{Binding Key}" />
+            </TreeViewItem>
+        </DataTemplate>
+
+        <local:TreeItemTemplateSelector x:Key="treeItemTemplateSelector"
+                                        AnimalTemplate="{StaticResource animalTemplate}"
+                                        CategoryTemplate="{StaticResource categoryTemplate}" />
+
+    </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-		<TextBlock Text="Hello, world!" Margin="20" FontSize="30" />
+        
+
+        <Border Margin="30"
+                BorderBrush="Blue"
+                BorderThickness="2"
+                Padding="10">
+
+            <TreeView ItemsSource="{Binding AnimalGroups, Source={StaticResource groupedAnimals}}"
+                      ItemTemplateSelector="{StaticResource treeItemTemplateSelector}" />
+
+        </Border>
     </Grid>
 </Page>

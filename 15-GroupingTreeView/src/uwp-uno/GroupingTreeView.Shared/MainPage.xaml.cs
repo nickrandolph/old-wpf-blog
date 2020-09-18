@@ -27,4 +27,15 @@ namespace GroupingTreeView
             this.InitializeComponent();
         }
     }
+
+
+    public class TreeItemTemplateSelector : DataTemplateSelector
+    {
+        public DataTemplate CategoryTemplate { get; set; }
+        public DataTemplate AnimalTemplate { get; set; }
+        protected override DataTemplate SelectTemplateCore(object item)
+        {
+            return (item is Animal) ? AnimalTemplate : CategoryTemplate;
+        }
+    }
 }
