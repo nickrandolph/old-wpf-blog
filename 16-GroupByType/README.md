@@ -1,8 +1,8 @@
 # How to implement custom grouping
 
-My previous post shows how to group items based on the value of a certain property. In a real-world scenario you may want to group your items based on some other logic. With this in mind, Avalon Data Binding provides a way for you to write custom code and specify how you want to group your items. This allows maximum flexibility; you can group your items pretty much any way you can think of.
+My previous post shows how to group items based on the value of a certain property. In a real-world scenario you may want to group your items based on some other logic. With this in mind, WPF Data Binding provides a way for you to write custom code and specify how you want to group your items. This allows maximum flexibility; you can group your items pretty much any way you can think of.
 
-Brett made a comment to my last blog post asking how to group items based on their type. I will use this scenario to show you how to do custom Grouping. 
+In this post I'll look at how to group items based on their type and an example of how to do custom Grouping. 
 
 My data source in this sample is of type ObservableCollection&lt;object&gt;, and contains some objects of type GreekGod and others of type GreekHero. My goal is to group all the items of type GreekGod in a group called "Greek Gods" and group all GreekHero items under the group "Greek Heroes". This is what the markup looks like:
 
@@ -84,4 +84,20 @@ For each of the items displayed in the TreeView, this template selector looks up
 
 Here is a screenshot of the completed sample:
 
+**WPF**
+
 ![](Images/16GroupByType.png)
+
+**UWP/WinUI Notes**
+GroupDescriptions aren't supported on UWP/WinUI so the Greek Gods and Heros are grouped using Linq in the codebehind of the page. 
+The TreeView isn't supported on Uno at the moment - due in v3.1
+The Treview on UWP/WinUI doesn't use a HierarchicalDataTemplate to define the hierarchy. Instead it uses TreeViewItem within a DataTemplate to define where there are child nodes.
+
+**UWP**
+
+![](Images/16GroupByType-uwp.png)
+
+
+**WinUI - Desktop**
+
+![](Images/16GroupByType-desktop.png)

@@ -7,7 +7,41 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-    </StackPanel>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.Resources>
+            <CollectionViewSource x:Key="cvs" />
+
+            <DataTemplate x:Key="GreekGroupTemplate">
+                <TreeViewItem ItemsSource="{Binding}">
+                    <TextBlock Text="{Binding Key}" />
+                </TreeViewItem>
+            </DataTemplate>
+
+
+            <DataTemplate x:Key="GreekGodTemplate">
+                <TextBlock Text="{Binding Path=GodName}" />
+            </DataTemplate>
+
+            <DataTemplate x:Key="GreekHeroTemplate">
+                <TextBlock Text="{Binding Path=HeroName}" />
+            </DataTemplate>
+
+            <local:GodHeroTemplateSelector x:Key="GodHeroTemplateSelector"
+                                           GreekGroup="{StaticResource GreekGroupTemplate}"
+                                           GreekGod="{StaticResource GreekGodTemplate}"
+                                           GreekHero="{StaticResource GreekHeroTemplate}" />
+
+        </Grid.Resources>
+
+        <Border Margin="30"
+                BorderBrush="Blue"
+                BorderThickness="2"
+                Padding="10">
+            <TreeView x:Name="GodHeroTreeView"
+                      ItemsSource="{Binding Source={StaticResource cvs}}"
+                      ItemTemplateSelector="{StaticResource GodHeroTemplateSelector}" />
+        </Border>
+    </Grid>
 </Window>

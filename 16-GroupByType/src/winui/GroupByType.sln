@@ -16,7 +16,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupByType.macOS", "GroupB
 EndProject
 Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "GroupByType.Desktop (Package)", "GroupByType.Desktop\GroupByType.Desktop (Package)\GroupByType.Desktop (Package).wapproj", "{8EA9DD7A-751B-4A03-868E-69406DC66F8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupByType.Desktop", "GroupByType.Desktop\GroupByType.Desktop\GroupByType.Desktop.csproj", "{442B90FF-6295-4698-AF88-4D88803CECE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GroupByType.Desktop", "GroupByType.Desktop\GroupByType.Desktop\GroupByType.Desktop.csproj", "{442B90FF-6295-4698-AF88-4D88803CECE9}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -221,6 +221,8 @@ Global
 		{F2F1CC12-2983-4C18-A953-44D9D5703C60}.AppStore|x86.Build.0 = Release|x86
 		{F2F1CC12-2983-4C18-A953-44D9D5703C60}.AppStore|x86.Deploy.0 = Release|x86
 		{F2F1CC12-2983-4C18-A953-44D9D5703C60}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{F2F1CC12-2983-4C18-A953-44D9D5703C60}.Debug|Any CPU.Build.0 = Debug|x86
+		{F2F1CC12-2983-4C18-A953-44D9D5703C60}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{F2F1CC12-2983-4C18-A953-44D9D5703C60}.Debug|ARM.ActiveCfg = Debug|ARM
 		{F2F1CC12-2983-4C18-A953-44D9D5703C60}.Debug|ARM.Build.0 = Debug|ARM
 		{F2F1CC12-2983-4C18-A953-44D9D5703C60}.Debug|ARM.Deploy.0 = Debug|ARM
@@ -393,6 +395,8 @@ Global
 		{8EA9DD7A-751B-4A03-868E-69406DC66F8F}.AppStore|x86.Build.0 = Release|x86
 		{8EA9DD7A-751B-4A03-868E-69406DC66F8F}.AppStore|x86.Deploy.0 = Release|x86
 		{8EA9DD7A-751B-4A03-868E-69406DC66F8F}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{8EA9DD7A-751B-4A03-868E-69406DC66F8F}.Debug|Any CPU.Build.0 = Debug|x86
+		{8EA9DD7A-751B-4A03-868E-69406DC66F8F}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{8EA9DD7A-751B-4A03-868E-69406DC66F8F}.Debug|ARM.ActiveCfg = Debug|x86
 		{8EA9DD7A-751B-4A03-868E-69406DC66F8F}.Debug|ARM64.ActiveCfg = Debug|x86
 		{8EA9DD7A-751B-4A03-868E-69406DC66F8F}.Debug|iPhone.ActiveCfg = Debug|x86
@@ -442,8 +446,8 @@ Global
 		{442B90FF-6295-4698-AF88-4D88803CECE9}.AppStore|x64.Build.0 = Release|x64
 		{442B90FF-6295-4698-AF88-4D88803CECE9}.AppStore|x86.ActiveCfg = Release|x86
 		{442B90FF-6295-4698-AF88-4D88803CECE9}.AppStore|x86.Build.0 = Release|x86
-		{442B90FF-6295-4698-AF88-4D88803CECE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{442B90FF-6295-4698-AF88-4D88803CECE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{442B90FF-6295-4698-AF88-4D88803CECE9}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{442B90FF-6295-4698-AF88-4D88803CECE9}.Debug|Any CPU.Build.0 = Debug|x86
 		{442B90FF-6295-4698-AF88-4D88803CECE9}.Debug|ARM.ActiveCfg = Debug|Any CPU
 		{442B90FF-6295-4698-AF88-4D88803CECE9}.Debug|ARM.Build.0 = Debug|Any CPU
 		{442B90FF-6295-4698-AF88-4D88803CECE9}.Debug|ARM64.ActiveCfg = Debug|Any CPU
